@@ -8,7 +8,6 @@ import AppLoading from 'expo-app-loading';
 let customFonts={
     "Bubblegum-Sans":require("../assets/fonts/BubblegumSans-Regular.ttf")
 };
-let stories =require('./stories.json')
 export default class PostCardScreen extends Component{
     constructor(props){
         super(props);

@@ -9,8 +9,8 @@ import AppLoading from 'expo-app-loading';
 
 let customFonts={
     "Bubblegum-Sans":require('../assets/fonts/BubblegumSans-Regular.ttf')
-}
-let stories=require('./stories.json')
+};
+let stories=require('./stories.json');
 export default class FeedScreen extends Component{
     constructor(props){
         super(props);
@@ -28,9 +28,7 @@ export default class FeedScreen extends Component{
     renderItem=({item:story})=>{
 return <PostCardScreen story={story} />
     }
-    keyExtractor=(item,index)=>{
-        index.toString();
-    }
+    keyExtractor=(item,index)=>index.toString();
     render(){
         if(!this.state.fontsLoaded){
             return <AppLoading/>
